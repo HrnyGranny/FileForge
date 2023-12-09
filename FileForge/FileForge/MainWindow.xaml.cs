@@ -53,6 +53,7 @@ namespace FileForge
             Compress_bt.Visibility = Visibility.Visible;
             Choose_bt_archive.Visibility = Visibility.Collapsed;
             Choose_bt_directory.Visibility = Visibility.Collapsed;
+            Final_lab.Visibility = Visibility.Collapsed;
         }
 
         private void VisibilityObjects2()
@@ -62,6 +63,7 @@ namespace FileForge
             Compress_bt.Visibility = Visibility.Collapsed;
             Choose_bt_archive.Visibility = Visibility.Visible;
             Choose_bt_directory.Visibility = Visibility.Visible;
+            Final_lab.Visibility = Visibility.Visible;
         }
 
         // Method to compress files
@@ -74,7 +76,8 @@ namespace FileForge
                     zip.CreateEntryFromFile(sourcePath, System.IO.Path.GetFileName(sourcePath)); // Provide a valid entry name
                 }
 
-                Console.WriteLine("File compressed successfully.");
+                System.Windows.MessageBox.Show("File compressed successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                
             }
             catch (Exception ex)
             {
@@ -90,7 +93,7 @@ namespace FileForge
             {
                 ZipFile.CreateFromDirectory(sourcePath, targetPath);
 
-                Console.WriteLine("Archive compressed successfully.");
+                System.Windows.MessageBox.Show("Archive compressed successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
@@ -103,7 +106,7 @@ namespace FileForge
             string selectedPath = null;
 
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.Description = "Seleccionar Carpeta";
+            folderBrowserDialog.Description = "Select the Folder";
             folderBrowserDialog.ShowNewFolderButton = false; // Evita la opción de crear nueva carpeta
 
             if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -117,7 +120,7 @@ namespace FileForge
             }
             else
             {
-                System.Windows.MessageBox.Show("No directory selected");
+                System.Windows.MessageBox.Show("No directory selected.");
             }
         }
         private void Compress_bt_Click(object sender, RoutedEventArgs e)
@@ -130,16 +133,20 @@ namespace FileForge
                 CompressFile(pathStart,pathEnd);
                 VisibilityObjects2();
                 Final_lab.Content = pathEnd;
+                Compress_bt.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFCA491C"));
+                Compress_bt.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF6D250B"));
             }
             else if (Directory.Exists(pathStart))
             {
                 CompressArchive(pathStart,pathEnd);
                 VisibilityObjects2();
                 Final_lab.Content = pathEnd;
+                Compress_bt.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFCA491C"));
+                Compress_bt.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF6D250B"));
             }
             else
             {
-                System.Windows.MessageBox.Show("The Path does not exists");
+                System.Windows.MessageBox.Show("The Path does not exists.");
             }
         }
 
@@ -148,7 +155,7 @@ namespace FileForge
             string selectedPath = null;
 
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.Description = "Select Folder to compress";
+            folderBrowserDialog.Description = "Select the Folder to compress";
             folderBrowserDialog.ShowNewFolderButton = false; // Evita la opción de crear nueva carpeta
 
             if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -164,7 +171,7 @@ namespace FileForge
             }
             else
             {
-                System.Windows.MessageBox.Show("No directory selected");
+                System.Windows.MessageBox.Show("No directory selected.");
             }
         }
 
@@ -173,7 +180,7 @@ namespace FileForge
             string selectedPath = null;
 
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-            openFileDialog.Title = "Select file to compress";
+            openFileDialog.Title = "Select the file to compress";
             openFileDialog.Multiselect = false;
             openFileDialog.CheckFileExists = true;
             openFileDialog.CheckPathExists = true;
@@ -192,7 +199,7 @@ namespace FileForge
             }
             else
             {
-                System.Windows.MessageBox.Show("No file selected");
+                System.Windows.MessageBox.Show("No file selected.");
             }
         }
 
@@ -201,9 +208,8 @@ namespace FileForge
             string userInput = Microsoft.VisualBasic.Interaction.InputBox("Name to the compress file:", "Name", "");
             if (!string.IsNullOrEmpty(userInput))
             {
-                pathName = userInput;
+                pathName = userInput + ".zip";
                 Name_bt.Content = userInput;
-
             }
         }
 
@@ -211,6 +217,9 @@ namespace FileForge
         {
             SelectFolder();
             Destination_bt.Content = pathNoFinal;
+            
+            Compress_bt.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFFFFFFF"));
+            Compress_bt.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFEC4C15"));
         }
     }
 }
