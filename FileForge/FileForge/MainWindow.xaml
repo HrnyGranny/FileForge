@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileForge"
         mc:Ignorable="d"
-        Title="FileForge v2.0" Height="450" Width="800" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ResizeMode="NoResize" Icon="/Img/Logo_PNG.png">
+        Title="FileForge v2.1" Height="450" Width="800" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ResizeMode="NoResize" Icon="/Img/Logo_PNG.png">
     <Grid>
-        <Rectangle x:Name="Orange_rec" HorizontalAlignment="Center" Height="176" Margin="0,258,0,0" VerticalAlignment="Top" Width="800" Fill="#FFEC4C15"/>
-        <Label x:Name="FileForge_lab" Content="FileForge" HorizontalAlignment="Center" Margin="0,175,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" Height="78" Width="268" FontSize="60"/>
-        <Image x:Name="Logo_img" HorizontalAlignment="Center" Height="129" Margin="0,41,0,0" VerticalAlignment="Top" Width="112" Source="/Img/Logo.png"/>
-        <Button x:Name="Choose_bt_archive" Content="CHOOSE ARCHIVE" HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top" Width="156" Height="38" FontFamily="Bahnschrift SemiBold" Foreground="#FFEC4C15" Background="White" BorderBrush="{x:Null}" Click="Choose_bt_archive_Click"/>
-        <Button x:Name="Compress_bt" Content="COMPRESS" HorizontalAlignment="Left" Margin="553,322,0,0" VerticalAlignment="Top" Width="156" Height="38" FontFamily="Bahnschrift SemiBold" BorderBrush="{x:Null}" Background="White" Foreground="#FFEC4C15" IsEnabled="False" Click="Compress_bt_Click"/>
-        <Button x:Name="Choose_bt_directory" Content="CHOOSE DIRECTORY" HorizontalAlignment="Left" Margin="90,322,0,0" VerticalAlignment="Top" Width="156" Height="38" FontFamily="Bahnschrift SemiBold" Foreground="#FFEC4C15" Background="White" BorderBrush="{x:Null}" Click="Choose_bt_directory_Click"/>
+        <Rectangle x:Name="Orange_rec" HorizontalAlignment="Center" Height="193" Margin="0,241,0,0" VerticalAlignment="Top" Width="800" Fill="#FFEC4C15"/>
+        <Label x:Name="FileForge_lab" Content="FileForge" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" Height="78" Width="268" FontSize="60"/>
+        <Image x:Name="Logo_img" HorizontalAlignment="Center" Height="129" Margin="0,23,0,0" VerticalAlignment="Top" Width="112" Source="/Img/Logo.png"/>
+        <Button x:Name="Choose_bt_archive" Content="CHOOSE ARCHIVE" HorizontalAlignment="Left" Margin="438,287,0,0" VerticalAlignment="Top" Width="268" Height="70" FontFamily="Bahnschrift SemiBold" Foreground="#FFEC4C15" Background="White" BorderBrush="{x:Null}" Click="Choose_bt_archive_Click" FontSize="18"/>
+        <Button x:Name="Compress_bt" Content="COMPRESS" HorizontalAlignment="Left" Margin="468,296,0,0" VerticalAlignment="Top" Width="216" Height="71" FontFamily="Bahnschrift SemiBold" BorderBrush="{x:Null}" Background="#FFCA491C" Foreground="#FF6D250B" Click="Compress_bt_Click" FontSize="18" Visibility="Collapsed"/>
+        <Button x:Name="Choose_bt_directory" Content="CHOOSE DIRECTORY" HorizontalAlignment="Left" Margin="101,287,0,0" VerticalAlignment="Top" Width="268" Height="70" FontFamily="Bahnschrift SemiBold" Foreground="#FFEC4C15" Background="White" BorderBrush="{x:Null}" Click="Choose_bt_directory_Click" FontSize="18"/>
+        <Label x:Name="Final_lab" Content="" Margin="101,372,94,10" FontFamily="Bahnschrift SemiBold" FontSize="16" Background="{x:Null}" Foreground="#FF58B351" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        <Button x:Name="Name_bt" Content="Name" HorizontalAlignment="Left" Margin="105,276,0,0" VerticalAlignment="Top" Height="46" Width="295" Background="White" Foreground="#FFCA491C" BorderBrush="{x:Null}" FontFamily="Bahnschrift SemiBold" FontSize="20" Click="Name_bt_Click" Visibility="Collapsed"/>
+        <Button x:Name="Destination_bt" Content="Destination" HorizontalAlignment="Left" Margin="105,339,0,0" VerticalAlignment="Top" Height="46" Width="295" Background="White" Foreground="#FFCA491C" BorderBrush="{x:Null}" FontSize="20" FontFamily="Bahnschrift SemiBold" Click="Destination_bt_Click" Visibility="Collapsed"/>
     </Grid>
 </Window>

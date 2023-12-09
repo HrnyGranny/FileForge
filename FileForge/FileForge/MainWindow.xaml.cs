@@ -25,7 +25,10 @@ namespace FileForge
     public partial class MainWindow : Window
     {
         string pathStart = string.Empty;
-        static string pathEnd = string.Empty;
+       
+        static string pathName = string.Empty;
+        static string pathNoFinal = string.Empty;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -41,6 +44,24 @@ namespace FileForge
             double windowHeight = Height;
             Left = (screenWidth - windowWidth) / 2;
             Top = (screenHeight - windowHeight) / 2;
+        }
+
+        private void VisibilityObjects1()
+        {
+            Name_bt.Visibility = Visibility.Visible;
+            Destination_bt.Visibility = Visibility.Visible;
+            Compress_bt.Visibility = Visibility.Visible;
+            Choose_bt_archive.Visibility = Visibility.Collapsed;
+            Choose_bt_directory.Visibility = Visibility.Collapsed;
+        }
+
+        private void VisibilityObjects2()
+        {
+            Name_bt.Visibility = Visibility.Collapsed;
+            Destination_bt.Visibility = Visibility.Collapsed;
+            Compress_bt.Visibility = Visibility.Collapsed;
+            Choose_bt_archive.Visibility = Visibility.Visible;
+            Choose_bt_directory.Visibility = Visibility.Visible;
         }
 
         // Method to compress files
@@ -77,7 +98,7 @@ namespace FileForge
             }
         }
 
-        static void SelectFolder()
+        private void SelectFolder()
         {
             string selectedPath = null;
 
@@ -92,12 +113,7 @@ namespace FileForge
 
             if (!string.IsNullOrEmpty(selectedPath))
             {
-                string userInput = Microsoft.VisualBasic.Interaction.InputBox("Name to the compress file:", "Name", "");
-               
-                if (!string.IsNullOrEmpty(userInput))
-                {
-                    pathEnd = System.IO.Path.Combine(selectedPath, userInput);
-                }
+                pathNoFinal = selectedPath;
             }
             else
             {
@@ -106,15 +122,20 @@ namespace FileForge
         }
         private void Compress_bt_Click(object sender, RoutedEventArgs e)
         {
-            SelectFolder();
+
+            string pathEnd = System.IO.Path.Combine(pathNoFinal, pathName);
 
             if (File.Exists(pathStart))
             {
                 CompressFile(pathStart,pathEnd);
+                VisibilityObjects2();
+                Final_lab.Content = pathEnd;
             }
             else if (Directory.Exists(pathStart))
             {
                 CompressArchive(pathStart,pathEnd);
+                VisibilityObjects2();
+                Final_lab.Content = pathEnd;
             }
             else
             {
@@ -138,6 +159,8 @@ namespace FileForge
             if (!string.IsNullOrEmpty(selectedPath))
             {
                 pathStart = selectedPath;
+
+                VisibilityObjects1();
             }
             else
             {
@@ -164,11 +187,30 @@ namespace FileForge
             if (!string.IsNullOrEmpty(selectedPath))
             {
                 pathStart = selectedPath;
+
+                VisibilityObjects1();
             }
             else
             {
                 System.Windows.MessageBox.Show("No file selected");
             }
+        }
+
+        private void Name_bt_Click(object sender, RoutedEventArgs e)
+        {
+            string userInput = Microsoft.VisualBasic.Interaction.InputBox("Name to the compress file:", "Name", "");
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                pathName = userInput;
+                Name_bt.Content = userInput;
+
+            }
+        }
+
+        private void Destination_bt_Click(object sender, RoutedEventArgs e)
+        {
+            SelectFolder();
+            Destination_bt.Content = pathNoFinal;
         }
     }
 }
