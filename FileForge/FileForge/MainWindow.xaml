@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileForge"
         mc:Ignorable="d"
-        Title="FileForge v2.1.1" Height="450" Width="800" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ResizeMode="NoResize" Icon="/Img/Logo_PNG.png">
+        Title="FileForge v2.1.2" Height="450" Width="800" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ResizeMode="NoResize" Icon="/Img/Logo_PNG.png">
     <Grid>
         <Rectangle x:Name="Orange_rec" HorizontalAlignment="Center" Height="193" Margin="0,241,0,0" VerticalAlignment="Top" Width="800" Fill="#FFEC4C15"/>
         <Label x:Name="FileForge_lab" Content="FileForge" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold" Height="78" Width="268" FontSize="60"/>

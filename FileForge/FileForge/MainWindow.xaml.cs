@@ -49,7 +49,9 @@ namespace FileForge
         private void VisibilityObjects1()
         {
             Name_bt.Visibility = Visibility.Visible;
+            Name_bt.Content = "Name";
             Destination_bt.Visibility = Visibility.Visible;
+            Destination_bt.Content = "Destination";
             Compress_bt.Visibility = Visibility.Visible;
             Choose_bt_archive.Visibility = Visibility.Collapsed;
             Choose_bt_directory.Visibility = Visibility.Collapsed;
