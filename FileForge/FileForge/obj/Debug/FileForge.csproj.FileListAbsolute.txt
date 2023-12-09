@@ -1,0 +1,15 @@
+C:\Users\alvar\source\repos\FileForge\FileForge\bin\Debug\FileForge.exe.config
+C:\Users\alvar\source\repos\FileForge\FileForge\bin\Debug\FileForge.exe
+C:\Users\alvar\source\repos\FileForge\FileForge\bin\Debug\FileForge.pdb
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.csproj.AssemblyReference.cache
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\MainWindow.g.cs
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\App.g.cs
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge_MarkupCompile.cache
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge_MarkupCompile.lref
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\MainWindow.baml
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.g.resources
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.Properties.Resources.resources
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.csproj.GenerateResource.cache
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.csproj.CoreCompileInputs.cache
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.exe
+C:\Users\alvar\source\repos\FileForge\FileForge\obj\Debug\FileForge.pdb
