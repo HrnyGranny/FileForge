@@ -15,8 +15,8 @@ Execute the FileForge.exe
 
 ## Home
 
+![FileForge](https://github.com/HrnyGranny/MULTIMEDIA-FileForge/assets/91948162/d79b75c7-d4b4-4362-b4f7-10d5d5b3084b)
+
 * Choose directory: Option to crompress a full directory in a new one
 * Choose archive: Option to compres an archive in a new directory with a new name
-
-
 
