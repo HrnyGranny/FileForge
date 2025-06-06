@@ -1,22 +1,31 @@
 # MULTIMEDIA-FileForge
 
 <p align="center">
-  <img src="https://github.com/HrnyGranny/MULTIMEDIA-FileForge/assets/91948162/ce2c6ddd-ada0-4120-9276-1bab3b6f111d" alt="Descripción de la imagen" width="200" />
+  <img src="https://github.com/user-attachments/assets/c88a5451-cea6-4289-9b91-a9701ac3d9d6" alt="FileForge Logo" width="200" />
 </p>
 
-# Creator
-Álvaro Ruiz Roldán
+## 📦 Description
 
-# SetUp
+A fast and simple app to compress files or folders in seconds, saving space and making sharing easier.
 
-Execute the FileForge.exe
+## 👤 Creator
 
-# User Guide
+**Álvaro Ruiz Roldán**
 
-## Home
+## ⚙️ Setup
 
-![FileForge](https://github.com/HrnyGranny/MULTIMEDIA-FileForge/assets/91948162/d79b75c7-d4b4-4362-b4f7-10d5d5b3084b)
+Just execute the `FileForge.exe` to start the application.  
+No installation required.
 
-* Choose directory: Option to crompress a full directory in a new one
-* Choose archive: Option to compres an archive in a new directory with a new name
+## 📘 User Guide
 
+### 🏠 Home
+
+![FileForge Screenshot](https://github.com/HrnyGranny/MULTIMEDIA-FileForge/assets/91948162/d79b75c7-d4b4-4362-b4f7-10d5d5b3084b)
+
+- **Choose Directory**: Compress an entire folder into a new compressed directory.
+- **Choose Archive**: Compress a single file into a new directory with a new name.
+
+---
+
+Feel free to contribute or suggest improvements. Happy compressing!
